@@ -1,0 +1,7 @@
+{
+  "name": "YYDS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

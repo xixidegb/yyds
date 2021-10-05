@@ -1,0 +1,21 @@
+ion-row div {
+    margin:5%;
+    width:40%;
+    background-color: rgb(219,232,201);
+    border-radius: 20px;
+}
+
+ion-row div:first-child{
+    background-color: rgb(251,234,183);
+}
+
+
+#tab4-3{
+    margin: 10% 5%;
+    background-color: rgb(254,247, 218);
+    border-radius: 20px;
+
+    p {
+        line-height: 0.3em;
+    }
+}
