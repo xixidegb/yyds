@@ -68,7 +68,7 @@ export class LoginPage implements OnInit {
         this.errorMsg = "";
         //this.router.navigateByUrl('test');
         //this.router.navigate(['tabs']);
-        this.navCtrl.navigateForward(['tab/tabs/tab1']);
+        this.navCtrl.navigateForward(['tabs/tabs/tab1']);
       }, error => {
         this.errorMsg = error.message;
         this.successMsg = "";

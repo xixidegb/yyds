@@ -11,7 +11,9 @@
 
   <div id="tab4-1">
     <h6>day/month</h6>
-    <h5>Hi username!</h5>
+    <!--<h5>Hi username!</h5>-->
+    <p>User email : <strong>{{ userDetail }}</strong></p>
+    
     <p>Good morning/afternoon!</p>
   </div>
 
@@ -53,6 +55,7 @@
         <ion-col><p>Protein</p></ion-col>
       </ion-row>
     </ion-grid>
+    <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Signout</ion-button>
 
   </div>
 
