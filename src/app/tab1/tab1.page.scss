@@ -4,7 +4,8 @@
 
 //part 1
 #home-header {
-    background-color: rgb(251, 234, 183);
+    background: linear-gradient(rgb(255, 238, 161),#f7f7f5);
+    //background-color: rgb(251, 234, 183);
     margin:0;
     ion-searchbar {
         --placeholder-font-weight: 2;
@@ -41,17 +42,20 @@ ion-buttons {
 
 //part 2
 #home-2 {
-    background-color: rgb(254, 247, 218);
-    margin: 2% 4%;
+  //  background-color: rgb(254, 247, 218);
+    margin: 8% 4%;
     border-radius: 15px;
     p {
         margin:auto;
         text-align: center;
+        font-size: 0.9em;
     }
     ion-icon {
-        height:60%;
-        width: 50%;
-        margin: auto;
+        height:50px;
+        width: auto;
+    }
+    ion-row {
+        margin: 5% 0;
     }
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -60,9 +64,9 @@ ion-buttons {
 
 //part 3
 #home-3 {
-    background-color: rgb(218, 232, 201);
+ //   background-color: rgb(218, 232, 201);
     border-radius: 15px;
-    margin: 2% 4%;
+    margin: 8% 4%;
     ion-label{
         font-size: 0.7em;
    }
@@ -76,12 +80,13 @@ ion-buttons {
        padding: 0 0 0 0;
        height:70px;
        min-width:fit-content;
+       background-color:rgb(254, 253, 249);
    }
 
-   h3 {
+   h4 {
        margin: auto;
    }
-   
+
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
