@@ -10,11 +10,22 @@ import { IonicAuthService } from '../ionic-auth.service';
 
 export class Tab4Page implements OnInit{
   userDetail: string;
+  currentDate;
+  greet;
 
   constructor(
     private router: Router,
     private ionicAuthService: IonicAuthService
-  ) {}
+  ) {
+    this.currentDate = new Date();
+    if (this.currentDate.getHours() < 12){
+      this.greet="Morning";
+    } else if(this.currentDate.getHours() > 12 && this.currentDate.getHours() < 18){
+      this.greet="Afternoon";
+    } else {
+      this.greet="Evening";
+    }
+  }
 
   ngOnInit() {
     this.ionicAuthService.userDetails().subscribe(response => {

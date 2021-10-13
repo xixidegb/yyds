@@ -1,3 +1,7 @@
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 //part 1
 #home-header {
     background-color: rgb(251, 234, 183);
@@ -44,13 +48,15 @@ ion-buttons {
         margin:auto;
         text-align: center;
     }
+    ion-icon {
+        height:60%;
+        width: 50%;
+        margin: auto;
+    }
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#classification-header {
-    font-family:'Arial Narrow', Arial, sans-serif;
-    font-size: 1.3em;
-    margin: auto;
-}
+
 
 //part 3
 #home-3 {
@@ -71,6 +77,12 @@ ion-buttons {
        height:70px;
        min-width:fit-content;
    }
+
+   h3 {
+       margin: auto;
+   }
+   
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
 

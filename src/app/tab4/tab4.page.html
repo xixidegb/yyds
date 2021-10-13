@@ -1,7 +1,7 @@
 <ion-content>
   <ion-header translucent>
     <ion-toolbar color='primary'>
-      <ion-title>Personal</ion-title>
+      <ion-title>My</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -9,50 +9,56 @@
     <ion-icon slot="icon-only" size="small" name="add-outline" ></ion-icon>
   </ion-button>
 
+
   <div id="tab4-1">
-    <h6>day/month</h6>
-    <!--<h5>Hi username!</h5>-->
-    <p>User email : <strong>{{ userDetail }}</strong></p>
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <h6>{{currentDate | date: 'dd MMMM'}}</h6> 
+    <p>Hi <strong>{{ userDetail }}</strong>!</p>
     
-    <p>Good morning/afternoon!</p>
+    <p>Good {{greet}}</p>
   </div>
 
 
 
-  <div>
-    <ion-grid>
-      <ion-row>
-        <div>
-          <ion-col>
-            <p>Suggest Intake</p>
-            <p>xxx</p>
-          </ion-col>
+
+
+  <div id="middle">
+        <div id="left">
+            <h5>Calories</h5>
+            <p id= "first"> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> xxx</p>
+            <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> xxx</p>
+            <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> daily rate</p>
         </div>
 
-        <div>
-          <ion-col>
-            <ion-icon src="assets/icon/strawberry.svg"></ion-icon>
-          </ion-col>
+        <div id ="right">
+            <h5>Notification</h5>
+            <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> Expires in xx days</p>
+            <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> Expires in xx days</p>
+            <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> Expires in xx days</p>
         </div>
-      </ion-row>
-    </ion-grid>
   </div>
 
   <div id="tab4-3">
     <ion-grid>
       <ion-row>
-          <ion-col>
-            <h6>Summary</h6>
-            <p>Consumed   xxxx</p>
-            <p>Left   xxxx</p>
+          <ion-col size="8">
+            <h5>Summary</h5>
+            <pre>Consumed          xxxxx</pre>
+            <pre>Left                   xxxxx</pre>
+            <pre>Total                  xxxxx</pre>
+          </ion-col>
+          <ion-col size="4">
+            <h5>Details</h5>
+            <ion-icon src="assets/icon/strawberry.svg"></ion-icon>
             <p>Total   xxxx</p>
           </ion-col>
-          <ion-col></ion-col>
       </ion-row>
       <ion-row>
         <ion-col><p>Protein</p></ion-col>
-        <ion-col><p>Protein</p></ion-col>
-        <ion-col><p>Protein</p></ion-col>
+        <ion-col><p>Fats</p></ion-col>
+        <ion-col><p>Carbs</p></ion-col>
       </ion-row>
     </ion-grid>
     <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Signout</ion-button>
