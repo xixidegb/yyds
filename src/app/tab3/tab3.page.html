@@ -1,24 +1,79 @@
 <ion-content>
-  <ion-header translucent>
-    <ion-toolbar color='primary'>
-        <ion-title>Customise plan</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <header>
+    <h3>STUDY</h3>
+    <h6>Combo list</h6>
+  </header>
+    <div id="icon">
+      <ion-icon id="mcolor" name="accessibility-outline" style.backgroundColor={{color}} (click)="showM()"></ion-icon>
+      <ion-icon id="wcolor" name="woman-outline" (click)="showW()"></ion-icon>
+      <ion-icon id="ecolor" src="assets/icon/strawberry.svg" (click)="showE()"></ion-icon>
+      <ion-icon id="ccolor" src="assets/icon/strawberry.svg" (click)="showC()"></ion-icon>
+    </div>
+
+
+
+
+
+<div id= "combo">
 
   <ion-grid>
     <ion-row>
+      <div class="m" style.display={{man}} > 
+        <ion-col>
+          <ion-card routerLink='/shopping-list'>
+            <img src="././assets/meat1.png"/>
+            <ion-card-header>
+              <ion-card-subtitle>Subtitle</ion-card-subtitle>
+              <ion-card-title>Title</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+
+      <div class="m" style.display={{man}}> 
+        <ion-col>
+          <ion-card routerLink='/shopping-list'>
+            <img src="././assets/meat2.png"/>
+            <ion-card-header>
+              <ion-card-subtitle>Subtitle</ion-card-subtitle>
+              <ion-card-title>Title</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+
+      <div class="m" style.display={{man}}> 
+        <ion-col>
+          <ion-card  routerLink='/shopping-list'>
+            <img src="././assets/meat3.png"/>
+            <ion-card-header>
+              <ion-card-subtitle>Subtitle</ion-card-subtitle>
+              <ion-card-title>Title</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+
+      
+
+
+
+    <div class= "w" style.display={{woman}}> 
       <ion-col>
-        <ion-card>
-          <img src="././assets/test.png" routerLink='/shopping-list'/>
+        <ion-card >
+          <img src="././assets/test.png" />
           <ion-card-header>
             <ion-card-subtitle>Subtitle</ion-card-subtitle>
             <ion-card-title>Title</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-             package1
+             woman1
           </ion-card-content>
         </ion-card>
       </ion-col>
+    </div>
+
+    <div class= "w" style.display={{woman}}> 
       <ion-col>
         <ion-card>
           <img src="././assets/test.png" />
@@ -27,15 +82,34 @@
             <ion-card-title>Title</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-             package1
+             woman2
           </ion-card-content>
         </ion-card>
       </ion-col>
+    </div>
+
+
     </ion-row>
   </ion-grid>
 
   <ion-grid>
     <ion-row>
+      <div class= "e" style.display={{elderly}} > 
+      <ion-col >
+        <ion-card>
+          <img src="././assets/test.png" />
+          <ion-card-header>
+            <ion-card-subtitle>Subtitle</ion-card-subtitle>
+            <ion-card-title>Title</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+             elderly
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      </div>
+
+      <div class= "c" style.display={{child}} > 
       <ion-col>
         <ion-card>
           <img src="././assets/test.png" />
@@ -44,22 +118,13 @@
             <ion-card-title>Title</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-             package1
+             child
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col>
-        <ion-card>
-          <img src="././assets/test.png" />
-          <ion-card-header>
-            <ion-card-subtitle>Subtitle</ion-card-subtitle>
-            <ion-card-title>Title</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-             package1
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
+      </div>
     </ion-row>
   </ion-grid>
+
+</div>
 </ion-content>
