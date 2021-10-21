@@ -8,16 +8,16 @@
 </ion-header>
 
 <ion-content>
-  <p>egg ----- 1</p>
-  <p>apple ----- 2</p>
-  <p>milk ----- 1</p>
-  <p>egg ----- 1</p>
-  <p>apple ----- 2</p>
-  <p>milk ----- 1</p>
-  <p>egg ----- 1</p>
-  <p>apple ----- 2</p>
-  <p>milk ----- 1</p>
-  <p>egg ----- 1</p>
-  <p>apple ----- 2</p>
-  <p>milk ----- 1</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="7">Description</ion-col>
+      <ion-col size="2">kcal</ion-col>
+      <ion-col size="3">Protein</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let rec of records">
+      <ion-col size="8" class="list">{{rec[0]}}</ion-col>
+      <ion-col size="2" class="list">{{rec[1]}}</ion-col>
+      <ion-col size="2" class="list">{{rec[2]}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

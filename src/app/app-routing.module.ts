@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'shopping-list',
     loadChildren: () => import('./shopping-list/shopping-list.module').then( m => m.ShoppingListPageModule)
   },
+  {
+    path: 'staple',
+    loadChildren: () => import('./staple/staple.module').then( m => m.StaplePageModule)
+  },
 
 
 ];
