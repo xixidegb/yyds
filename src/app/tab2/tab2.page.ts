@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
+
 
 @Component({
   selector: 'app-tab2',
@@ -6,24 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  searchTerm: string;
-  foods = [
-    {
-      'name': 'apple',
-      'price': 20
-    },
-    {
-      'name': 'banana',
-      'price': 15
-    },
-    {
-      'name': 'peach',
-      'price': 10
-    }
-  ];
-
-  constructor() {}
-
+  public topic: any;
+  public foodData:any;
+  constructor(public api:ApiService) {}
+  
+  search(){
+    this.api.getFood(this.topic).subscribe(result=>{
+      console.log(result);
+      this.foodData=result['hints'];
+    });
+  }
 }
 
