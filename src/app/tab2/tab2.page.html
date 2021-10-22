@@ -15,12 +15,29 @@
     <ion-button expand='block' (click)='search()' >Search</ion-button>
    
     <ion-card mode='ios' *ngFor='let item of foodData'>
-      {{item.food.label}}: <br>
-      Carbs: {{item.food.nutrients.CHOCDF}} g <br>
-      Energy: {{item.food.nutrients.ENERC_KCAL}} kcal <br>
-      Fat: {{item.food.nutrients.FAT}} g <br>
-      Fiber: {{item.food.nutrients.FIBTG}} g <br>
-      Protein: {{item.food.nutrients.PROCNT}} g <br>
-     </ion-card>
+      <ion-label><b>Name: </b> {{item.food.label}}</ion-label><br>
+      <ion-grid>
+        <ion-row>
+          <ion-col size='3'>
+            <ion-label><b>Carbs:</b></ion-label><br>
+            <ion-label><b>Energy:</b></ion-label><br>
+            <ion-label><b>Fat:</b></ion-label><br>
+            <ion-label><b>Fiber:</b></ion-label><br>
+            <ion-label><b>Protein:</b></ion-label><br>
+          </ion-col>
+          <ion-col size='6'>
+            <ion-label>{{item.food.nutrients.CHOCDF}}g</ion-label><br>
+            <ion-label>{{item.food.nutrients.ENERC_KCAL}}kcal</ion-label><br>
+            <ion-label>{{item.food.nutrients.FAT}}g</ion-label><br>
+            <ion-label>{{item.food.nutrients.FIBTG}}g</ion-label><br>
+            <ion-label>{{item.food.nutrients.PROCNT}}g</ion-label><br>
+          </ion-col>
+          <ion-col size='3'>
+            <br>
+            <img src={{item.food.image}} width="60" height="60" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
   
 </ion-content>
