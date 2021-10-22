@@ -1,3 +1,4 @@
+
 <ion-content>
   <ion-header translucent>
     <ion-toolbar color='primary'>
@@ -15,9 +16,11 @@
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <h6>{{currentDate | date: 'dd MMMM'}}</h6> 
-    <p>Hi <strong>{{ userDetail }}</strong>!</p>
-    
-    <p>Good {{greet}}</p>
+    <ion-label>Hi, <strong> {{user.name}} </strong>!</ion-label> <br>
+    <br>
+    <ion-label>Weight: {{user.weight}} kg</ion-label> <br>
+    <ion-label>Height: {{user.height}} cm</ion-label> <br>
+    <p>Good {{greet}}!</p>
   </div>
 
 
@@ -47,7 +50,7 @@
             <h5>Summary</h5>
             <pre>Consumed          xxxxx</pre>
             <pre>Left                   xxxxx</pre>
-            <pre>Total                  xxxxx</pre>
+            <pre>Total             {{user.cal}} cal</pre>
           </ion-col>
           <ion-col size="4">
             <h5>Details</h5>
@@ -64,10 +67,5 @@
     <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Signout</ion-button>
 
   </div>
-
-
-
-
-  
 
 </ion-content>
