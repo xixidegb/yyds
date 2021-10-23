@@ -37,6 +37,54 @@ const routes: Routes = [
     path: 'staple',
     loadChildren: () => import('./staple/staple.module').then( m => m.StaplePageModule)
   },
+  {
+    path: 'man1',
+    loadChildren: () => import('./man1/man1.module').then( m => m.Man1PageModule)
+  },
+  {
+    path: 'man2',
+    loadChildren: () => import('./man2/man2.module').then( m => m.Man2PageModule)
+  },
+  {
+    path: 'man3',
+    loadChildren: () => import('./man3/man3.module').then( m => m.Man3PageModule)
+  },
+  {
+    path: 'woman1',
+    loadChildren: () => import('./woman1/woman1.module').then( m => m.Woman1PageModule)
+  },
+  {
+    path: 'woman2',
+    loadChildren: () => import('./woman2/woman2.module').then( m => m.Woman2PageModule)
+  },
+  {
+    path: 'woman3',
+    loadChildren: () => import('./woman3/woman3.module').then( m => m.Woman3PageModule)
+  },
+  {
+    path: 'child1',
+    loadChildren: () => import('./child1/child1.module').then( m => m.Child1PageModule)
+  },
+  {
+    path: 'child2',
+    loadChildren: () => import('./child2/child2.module').then( m => m.Child2PageModule)
+  },
+  {
+    path: 'child3',
+    loadChildren: () => import('./child3/child3.module').then( m => m.Child3PageModule)
+  },
+  {
+    path: 'elderly1',
+    loadChildren: () => import('./elderly1/elderly1.module').then( m => m.Elderly1PageModule)
+  },
+  {
+    path: 'elderly2',
+    loadChildren: () => import('./elderly2/elderly2.module').then( m => m.Elderly2PageModule)
+  },
+  {
+    path: 'elderly3',
+    loadChildren: () => import('./elderly3/elderly3.module').then( m => m.Elderly3PageModule)
+  },
 
 
 ];
