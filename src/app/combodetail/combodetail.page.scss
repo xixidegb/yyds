@@ -1,0 +1,18 @@
+ion-row {
+    padding:0 3%;
+
+    ion-col {
+        text-align:center;
+    }
+}
+
+
+ion-item {
+    ion-col:first-child {
+        color:rgb(246, 201, 52);
+    }
+    ion-col:nth-child(2) {
+        color:gray;
+        text-align:right
+    }
+}

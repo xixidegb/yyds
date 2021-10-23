@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class Man1Page implements OnInit {
   public fat:any;
   public carbohydrates:any;
   public test:any;
-  constructor(public api:ApiService) {}
+
+  constructor(public api:ApiService, private router:Router) {}
 
   ngOnInit() {
     this.meal()
@@ -40,6 +42,11 @@ export class Man1Page implements OnInit {
   //   this.api.getIngr().subscribe(result=>{
   //     console.log(result)});
   //   }
+
+  detail(id) {
+   // console.log(id);
+    this.router.navigate(['/combodetail',{id}]);
+  }
 
 }
 

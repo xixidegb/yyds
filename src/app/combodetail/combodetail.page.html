@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>combodetail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="newsImage" src="https://spoonacular.com/recipeImages/{{id}}-312x150.jpg">
+
+
+  <!--
+  <ion-label>recipeid: {{id}}</ion-label>   -->
+
+  <h6>About indirect fasting</h6>
+  <ion-row>
+    <ion-col>{{fat}}</ion-col>  
+    <ion-col>{{calories}}</ion-col> 
+    <ion-col>{{carbs}}</ion-col>
+    <ion-col>{{protein}}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>Fat:</ion-col>  
+    <ion-col>Calories:</ion-col> 
+    <ion-col>Carbs:</ion-col>
+    <ion-col>Protein:</ion-col>
+  </ion-row>
+
+
+
+
+  <h5>List of ingredients</h5>
+
+  <ion-item *ngFor='let item of ingredients'>
+    <ion-col>
+     {{item.name}}    
+    </ion-col>
+
+    <ion-col>
+       {{item.amount.metric.value}} {{item.amount.metric.unit}}
+     </ion-col>
+    
+  </ion-item>
+
+
+
+
+
+
+
+</ion-content>

@@ -21,8 +21,12 @@ export class ApiService {
    }
 
 
-  //  getIngr() {
-  //    return this.http.get('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/832490/ingredientWidget?rapidapi-key=42eaa26269mshf1c6ec903e82214p1e448bjsn61de0b58be57&')
-     
-  //  }
+  getNutrition(id) {
+      return this.http.get('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/'+id+'/nutritionWidget.json?rapidapi-key=42eaa26269mshf1c6ec903e82214p1e448bjsn61de0b58be57&');
+    }
+
+
+  getIngre(id){
+    return this.http.get('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/'+id+'/ingredientWidget.json?rapidapi-key=42eaa26269mshf1c6ec903e82214p1e448bjsn61de0b58be57&')
+  }
 }

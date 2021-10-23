@@ -89,6 +89,22 @@ const routes: Routes = [
     path: 'reset',
     loadChildren: () => import('./reset/reset.module').then( m => m.ResetPageModule)
   },
+  {
+    path: 'combodetail',
+    loadChildren: () => import('./combodetail/combodetail.module').then( m => m.CombodetailPageModule)
+  },
+  {
+    path: 'man4',
+    loadChildren: () => import('./man4/man4.module').then( m => m.Man4PageModule)
+  },
+  {
+    path: 'woman4',
+    loadChildren: () => import('./woman4/woman4.module').then( m => m.Woman4PageModule)
+  },
+  {
+    path: 'child4',
+    loadChildren: () => import('./child4/child4.module').then( m => m.Child4PageModule)
+  },
 
 
 ];
