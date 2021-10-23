@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { IonicAuthService } from '../ionic-auth.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { NavController } from '@ionic/angular';
 
 export class LoginPage implements OnInit {
 
+  user: any = {};
   userForm: FormGroup;
   successMsg: string = '';
   errorMsg: string = '';
@@ -45,7 +47,8 @@ export class LoginPage implements OnInit {
     private router: Router,
     private ionicAuthService: IonicAuthService,
     private fb: FormBuilder,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private authObj: AngularFireAuth
   ) { }
 
   ngOnInit() {
@@ -61,6 +64,7 @@ export class LoginPage implements OnInit {
     });
   }
 
+  /*
   signIn(value) {
     this.ionicAuthService.signinUser(value)
       .then((response) => {
@@ -74,6 +78,24 @@ export class LoginPage implements OnInit {
         this.successMsg = "";
       })
   }
+  */
+
+ signIn() {
+
+  if (this.user.email && this.user.password) {
+    
+    this.authObj.signInWithEmailAndPassword(this.user.email, this.user.password).then((res) => {
+      console.log(res);
+
+      this.router.navigateByUrl('tabs/tabs/tab1');
+
+
+    }).catch(e => {
+      console.log(e);
+    })
+    
+  }
+}
 
   goToSignup() {
     this.router.navigateByUrl('register');
