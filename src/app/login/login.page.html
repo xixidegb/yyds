@@ -1,39 +1,3 @@
-<!--<ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title>Log in</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <form>
-      <ion-item lines="full">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
-  
-      <ion-item lines="full">
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
-  
-      <ion-item lines='none'>
-        <a routerLink='/register'>Create Account</a>
-      </ion-item>
-  
-      <ion-row>
-        <ion-col>
-                                  //routerLink just for testing, should be removed! 
-          <ion-button type="submit" routerLink='/tab/tabs/tab1' color="dark" expand="block">LOG IN</ion-button>
-        </ion-col>
-      </ion-row>
-    </form>
-  </ion-content>
-
--->
-
 <ion-header>
   <ion-toolbar>
     <ion-title>login</ion-title>
@@ -44,10 +8,10 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form class="form" [formGroup]="userForm" (ngSubmit)="signIn(userForm.value)">
+  <form class="form" [formGroup]="userForm" (ngSubmit)="signIn()">
     <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
+      <ion-input type="text" formControlName="email" [(ngModel)]="user.email"></ion-input>
     </ion-item>
     
     <ng-container *ngFor="let error of error_msg.email">
@@ -58,7 +22,7 @@
 
     <ion-item>
       <ion-label position="floating" color="primary">Password</ion-label>
-      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+      <ion-input type="password" formControlName="password" [(ngModel)]="user.password" class="form-controll" required></ion-input>
     </ion-item>
     
     <ng-container *ngFor="let error of error_msg.password">
@@ -72,4 +36,5 @@
     <label class="ion-text-center" color="danger">{{errorMsg}}</label>
   </form>
   <p class="ion-text-center">Not registered yet? <a (click)="goToSignup()">Register</a></p>
+  <p class="ion-text-center"><a routerLink="/reset">Reset</a> your Password</p>
 </ion-content>
