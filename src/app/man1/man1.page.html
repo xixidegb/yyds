@@ -9,4 +9,34 @@
 
 <ion-content>
 
+  <ion-card *ngFor='let item of meals'>
+    <ion-card-header>
+      <img class="newsImage" [src]="item.urlToImage">
+      <h4>
+        {{item.title}}     ID:{{item.id}}
+      </h4>
+      <h4>
+        readyInMinutes: {{item.readyInMinutes}}
+      </h4>
+    </ion-card-header>
+    <ion-card-content>
+      <img class="newsImage" src="https://spoonacular.com/recipeImages/{{item.id}}-90x90.jpg">
+      
+      <p> sourceUrl: {{item.sourceUrl}} </p>
+    </ion-card-content>
+   </ion-card>
+
+   <ion-card >
+    <ion-card-header>
+      <h4>
+        Nutrients:
+      </h4>
+    </ion-card-header>
+    <ion-card-content>
+      <p>calories: {{calories}}</p>
+      <p>protein: {{protein}}</p>
+      <p>fat: {{fat}} </p>
+      <p>carbohydrates: {{carbohydrates}} </p>
+    </ion-card-content>
+   </ion-card>
 </ion-content>

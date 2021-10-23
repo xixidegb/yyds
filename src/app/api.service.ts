@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class ApiService {
 
   constructor(public http: HttpClient) { }
@@ -12,4 +14,15 @@ export class ApiService {
     return this.http.get('https://api.edamam.com/api/food-database/v2/parser?app_id=42429cf5&app_key=a0caa2cf6da6155783859e5cb09588d4&ingr='+topic+'&nutrition-type=cooking');
 
   }
+
+
+  getMeal(cal){
+     return this.http.get('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?rapidapi-key=42eaa26269mshf1c6ec903e82214p1e448bjsn61de0b58be57&&targetCalories='+cal+'&timeFrame=day');
+   }
+
+
+  //  getIngr() {
+  //    return this.http.get('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/832490/ingredientWidget?rapidapi-key=42eaa26269mshf1c6ec903e82214p1e448bjsn61de0b58be57&')
+     
+  //  }
 }
