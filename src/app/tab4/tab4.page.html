@@ -16,9 +16,10 @@
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <h6>{{currentDate | date: 'dd MMMM'}}</h6> 
-    <p>Hi <strong>{{user.name}}</strong>!</p>
-    Weight: {{user.weight}}
-    Height: {{user.height}}
+    <ion-label>Hi, <strong> {{user.name}} </strong>!</ion-label> <br>
+    <br>
+    <ion-label>Weight: {{user.weight}} kg</ion-label> <br>
+    <ion-label>Height: {{user.height}} cm</ion-label> <br>
     <p>Good {{greet}}!</p>
   </div>
 
@@ -48,8 +49,8 @@
           <ion-col size="8">
             <h5>Summary</h5>
             <pre>Consumed          xxxxx</pre>
-            <pre>Left                   xxxxx</pre>
-            <pre>Total                  xxxxx</pre>
+            <pre>Left              xxxxx</pre>
+            <pre>Total             {{user.cal}} cal</pre>
           </ion-col>
           <ion-col size="4">
             <h5>Details</h5>

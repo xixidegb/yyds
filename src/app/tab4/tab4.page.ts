@@ -58,6 +58,21 @@ export class Tab4Page implements OnInit{
 
    this.db.object('users/' + this.uid).snapshotChanges().subscribe((usersnap: any) => {
     this.user = { 'key': usersnap.key, ...usersnap.payload.val() };
+    var height = this.user.height
+    var weight = this.user.weight
+    var gender = this.user.gender
+    var age = this.user.age
+
+    // BMR（男）=（13.7×体重（kg））+（5.0×身高（cm））-（6.8×年龄）+66
+    // BMR（女）=（9.6×体重（kg））+（1.8×身高（cm））-（4.7×年龄）+655
+
+    var cal
+    if (gender=='male') {
+      cal = 13.7 * weight + 5 * height - 6.8 * age + 66
+    } else {
+      cal = 9.6 * weight + 1.8 * height - 4.7 * age + 655
+    }
+    this.user['cal'] = cal
   })
 
   }
