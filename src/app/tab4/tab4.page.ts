@@ -32,7 +32,7 @@ export class Tab4Page implements OnInit{
   ) {
     this.currentDate = new Date();
     if (this.currentDate.getHours() < 12){
-      this.greet="Morning";
+      this.greet = "Morning";
     } else if(this.currentDate.getHours() > 12 && this.currentDate.getHours() < 18){
       this.greet="Afternoon";
     } else {
@@ -56,7 +56,7 @@ export class Tab4Page implements OnInit{
     })
     */
 
-    this.db.object('users/' + this.uid).snapshotChanges().subscribe((usersnap: any) => {
+   this.db.object('users/' + this.uid).snapshotChanges().subscribe((usersnap: any) => {
     this.user = { 'key': usersnap.key, ...usersnap.payload.val() };
     var height = this.user.height
     var weight = this.user.weight
@@ -74,9 +74,8 @@ export class Tab4Page implements OnInit{
     }
     this.user['cal'] = cal
   })
+
   }
-
-
 
 
   signOut() {
