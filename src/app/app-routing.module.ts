@@ -85,6 +85,10 @@ const routes: Routes = [
     path: 'elderly3',
     loadChildren: () => import('./elderly3/elderly3.module').then( m => m.Elderly3PageModule)
   },
+  {
+    path: 'reset',
+    loadChildren: () => import('./reset/reset.module').then( m => m.ResetPageModule)
+  },
 
 
 ];
