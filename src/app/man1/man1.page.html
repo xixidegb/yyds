@@ -1,14 +1,12 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>man1</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-  </ion-toolbar>
+    <h5>Man-2250</h5>
 </ion-header>
 
 <ion-content>
-
+  
   <ion-card *ngFor='let item of meals' (click)="detail(item.id)">
     <ion-card-header>
       <h4>

@@ -1,9 +1,41 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>man4</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-card *ngFor='let item of meals' (click)="detail(item.id)">
+    <ion-card-header>
+      <h4>
+        {{item.title}}     ID:{{item.id}}
+      </h4>
+      <h4>
+        readyInMinutes: {{item.readyInMinutes}}
+      </h4>
+    </ion-card-header>
+    <ion-card-content>
+      <img class="newsImage" src="https://spoonacular.com/recipeImages/{{item.id}}-90x90.jpg">
+      
+      <p> sourceUrl: {{item.sourceUrl}} </p>
+    </ion-card-content>
+   </ion-card>
+
+   <ion-card >
+    <ion-card-header>
+      <h4>
+        Nutrients:
+      </h4>
+    </ion-card-header>
+    <ion-card-content>
+      <p>calories: {{calories}}</p>
+      <p>protein: {{protein}}</p>
+      <p>fat: {{fat}} </p>
+      <p>carbohydrates: {{carbohydrates}} </p>
+    </ion-card-content>
+   </ion-card>
 </ion-content>
