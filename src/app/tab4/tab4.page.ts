@@ -78,15 +78,7 @@ export class Tab4Page implements OnInit{
   }
 
 
-  signOut() {
-    this.ionicAuthService.signoutUser()
-      .then(res => {
-        this.router.navigateByUrl('login');
-      })
-      .catch(error => {
-        console.log(error);
-      })
-  }
+  
 }
 
 
