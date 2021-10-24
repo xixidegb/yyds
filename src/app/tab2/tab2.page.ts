@@ -10,12 +10,14 @@ import { ApiService } from '../api.service';
 export class Tab2Page {
   public topic: any;
   public foodData:any;
+  public miss: any;
   constructor(public api:ApiService) {}
   
   search(){
     this.api.getFood(this.topic).subscribe(result=>{
       console.log(result);
-      this.foodData=result['hints'];
+      this.foodData=result;
+      /*
       var i;
       console.log(this.foodData[0])
       for (i in this.foodData) {
@@ -39,6 +41,7 @@ export class Tab2Page {
         // item['food']['nutrients']['FIBTG'] = 0
         // item['food']['nutrients']['PROCNT'] = 0
       }
+      */
     });
   }
 }
