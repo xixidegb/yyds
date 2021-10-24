@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar >
     <ion-title></ion-title>
     <ion-buttons slot="start">
@@ -9,48 +9,47 @@
 
 <ion-content fullscreen="true">
   <div class="contenu">
-  <img class="newsImage" src="https://spoonacular.com/recipeImages/{{id}}-312x231.jpg">
+    <img class="newsImage" src="https://spoonacular.com/recipeImages/{{id}}-312x231.jpg">
 
 
-  <!--
-  <ion-label>recipeid: {{id}}</ion-label>   -->
+    <!--
+    <ion-label>recipeid: {{id}}</ion-label>   -->
 
-  <h6>{{title}}</h6>
-  <ion-grid>
-  <ion-row>
-    <ion-col class="value">{{fat}}</ion-col>  
-    <ion-col class="value">{{calories}}</ion-col> 
-    <ion-col class="value">{{carbs}}</ion-col>
-    <ion-col class="value">{{protein}}</ion-col>
-  </ion-row>
+    <h5>{{title}}</h5>
+    <ion-grid>
+        <ion-row>
+          <ion-col class="value">{{fat}}</ion-col>  
+          <ion-col class="value">{{calories}}</ion-col> 
+          <ion-col class="value">{{carbs}}</ion-col>
+          <ion-col class="value">{{protein}}</ion-col>
+        </ion-row>
 
-  <ion-row>
-    <ion-col class="name">Fat</ion-col>  
-    <ion-col class="name">Calories</ion-col> 
-    <ion-col class="name">Carbs</ion-col>
-    <ion-col class="name">Protein</ion-col>
-  </ion-row>
-</ion-grid>
-
-
-
-  <h5>List of ingredients</h5>
-
-  <ion-item *ngFor='let item of ingredients'>
-    <ion-col size="7">
-     {{item.name}}    
-    </ion-col>
-
-    <ion-col size="5">
-       {{item.amount.metric.value}} {{item.amount.metric.unit}}
-     </ion-col>
-    
-  </ion-item>
+        <ion-row>
+          <ion-col class="name">Fat</ion-col>  
+          <ion-col class="name">Calories</ion-col> 
+          <ion-col class="name">Carbs</ion-col>
+          <ion-col class="name">Protein</ion-col>
+        </ion-row>
+    </ion-grid>
 
 
 
+    <h6>List of ingredients</h6>
+    <ion-item lines="none" *ngFor='let item of ingredients'>
+        <ion-col size="8" >
+        {{item.name}}    
+        </ion-col>
 
-</div>
+        <ion-col size="4">
+          {{item.amount.metric.value}} {{item.amount.metric.unit}}
+        </ion-col>
+      
+    </ion-item>
+    <a href="{{url}}">More</a>
+    <br>
+    <br>
+  </div>
 
 
+  
 </ion-content>
