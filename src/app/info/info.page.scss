@@ -1,9 +1,7 @@
-a {text-decoration: none}
+.ion-no-margin {
+    background: transparent;
+}
 
 ion-content {
     --background: linear-gradient(rgb(255, 238, 161),#ffffff);
-}
-
-.list-background {
-    background: transparent;
 }
