@@ -1,45 +1,47 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>combodetail</ion-title>
+  <ion-toolbar >
+    <ion-title></ion-title>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button color="primary"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <img class="newsImage" src="https://spoonacular.com/recipeImages/{{id}}-312x150.jpg">
+<ion-content fullscreen="true">
+  <div class="contenu">
+  <img class="newsImage" src="https://spoonacular.com/recipeImages/{{id}}-312x231.jpg">
 
 
   <!--
   <ion-label>recipeid: {{id}}</ion-label>   -->
 
-  <h6>About indirect fasting</h6>
+  <h6>{{title}}</h6>
+  <ion-grid>
   <ion-row>
-    <ion-col>{{fat}}</ion-col>  
-    <ion-col>{{calories}}</ion-col> 
-    <ion-col>{{carbs}}</ion-col>
-    <ion-col>{{protein}}</ion-col>
+    <ion-col class="value">{{fat}}</ion-col>  
+    <ion-col class="value">{{calories}}</ion-col> 
+    <ion-col class="value">{{carbs}}</ion-col>
+    <ion-col class="value">{{protein}}</ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col>Fat:</ion-col>  
-    <ion-col>Calories:</ion-col> 
-    <ion-col>Carbs:</ion-col>
-    <ion-col>Protein:</ion-col>
+    <ion-col class="name">Fat</ion-col>  
+    <ion-col class="name">Calories</ion-col> 
+    <ion-col class="name">Carbs</ion-col>
+    <ion-col class="name">Protein</ion-col>
   </ion-row>
-
+</ion-grid>
 
 
 
   <h5>List of ingredients</h5>
 
   <ion-item *ngFor='let item of ingredients'>
-    <ion-col>
+    <ion-col size="7">
      {{item.name}}    
     </ion-col>
 
-    <ion-col>
+    <ion-col size="5">
        {{item.amount.metric.value}} {{item.amount.metric.unit}}
      </ion-col>
     
@@ -48,7 +50,7 @@
 
 
 
-
+</div>
 
 
 </ion-content>

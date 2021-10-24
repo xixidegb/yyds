@@ -10,12 +10,14 @@ import { ApiService } from '../api.service';
 export class CombodetailPage implements OnInit {
 
   id: any
+  url:any
   nutritions: any
   fat:any
   calories:any
   carbs :any
   protein:any
   ingredients:any
+  title:any
 
 
 
@@ -23,7 +25,11 @@ export class CombodetailPage implements OnInit {
 
   constructor(public api:ApiService, private activeRoutes: ActivatedRoute) { 
     this.id = this.activeRoutes.snapshot.paramMap.get('id');
+    this.url = this.activeRoutes.snapshot.paramMap.get('url');
+    this.title = this.activeRoutes.snapshot.paramMap.get('title');
     console.log(this.id);
+    console.log(this.url);
+    console.log(this.title);
   }
 
 

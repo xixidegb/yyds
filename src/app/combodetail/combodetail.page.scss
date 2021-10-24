@@ -1,3 +1,19 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    --opacity: 0;
+}
+
+.contenu {
+    position : absolute; 
+    top : 0;
+    left : 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+ }
+
+
 ion-row {
     padding:0 3%;
 
@@ -8,11 +24,46 @@ ion-row {
 
 
 ion-item {
+    font-size:0.9em;
+    margin: 0;
     ion-col:first-child {
-        color:rgb(246, 201, 52);
+        color:rgb(255, 164, 127);
     }
     ion-col:nth-child(2) {
-        color:gray;
+        color:rgb(76,76,76);
         text-align:right
     }
+    border:#ffffff;
+}
+
+
+
+h6{
+    margin: 4%;    
+}
+
+h5 {
+    margin: 4%;  
+}
+
+
+ion-grid {
+    background: linear-gradient(#ffffff,rgb(254, 252, 242));
+    border-radius: 20px;
+    box-shadow: rgba(22, 22, 22, 0.15) 0px 5px 8px 0px;
+    ion-row {
+        margin:2% 0;
+    }
+    padding:4% 0;
+    margin:0 3%;
+}
+
+.name {
+    font-family: Arial, sans-serif;
+    font-weight:300;
+    font-size: 0.8em;
+}
+
+.value {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
