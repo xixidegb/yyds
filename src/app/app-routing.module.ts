@@ -109,6 +109,10 @@ const routes: Routes = [
     path: 'info',
     loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
   },
+  {
+    path: 'elderly4',
+    loadChildren: () => import('./elderly4/elderly4.module').then( m => m.Elderly4PageModule)
+  },
 
 
 ];

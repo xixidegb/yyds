@@ -1,9 +1,52 @@
+<!--header-->
 <ion-header>
   <ion-toolbar>
-    <ion-title>child3</ion-title>
+    <ion-title>Child bento</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+  <!--background color-->
+  <div></div>
 
+<!--meals-->
+<ion-content id ="tt">
+
+      <h5>
+        Meal Nutrients:
+      </h5>
+<ion-grid>
+    <ion-row>
+      <ion-col>Calories: {{calories}}</ion-col>
+      <ion-col>Protein: {{protein}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Fat: {{fat}} </ion-col>
+      <ion-col>Carbs: {{carbohydrates}} </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-card *ngFor='let item of meals' (click)="detail(item.id,item.sourceUrl,item.title)">
+    <ion-card-header>
+      <h6>
+        {{item.title}}     
+      </h6>
+      <!--
+      <p>
+        recipe ID:{{item.id}} 
+      </p>   -->
+      <p>
+        ready In Minutes: {{item.readyInMinutes}}
+      </p>
+    </ion-card-header>
+    <ion-card-content>
+      <img class="newsImage" src="https://spoonacular.com/recipeImages/{{item.id}}-240x150.jpg">
+    </ion-card-content>
+   </ion-card>
+
+   
 </ion-content>

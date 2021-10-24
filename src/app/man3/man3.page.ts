@@ -9,13 +9,14 @@ import { ApiService } from '../api.service';
 })
 export class Man3Page implements OnInit {
 
-  public cal1= 2400
+  public cal1= 2300
   public meals:any;
   public protein:any;
   public calories:any;
   public fat:any;
   public carbohydrates:any;
   public test:any;
+  public title:any;
 
   constructor(public api:ApiService, private router:Router) {}
 
@@ -28,10 +29,10 @@ export class Man3Page implements OnInit {
     this.api.getMeal(this.cal1).subscribe(result=>{
       console.log(result);
       this.meals=result['meals'];
-      this.protein=result['nutrients'].protein;
-      this.calories=result['nutrients'].calories;
-      this.fat=result['nutrients'].fat;
-      this.carbohydrates=result['nutrients'].carbohydrates;
+      this.protein=parseInt(result['nutrients'].protein);
+      this.calories=parseInt(result['nutrients'].calories);
+      this.fat=parseInt(result['nutrients'].fat);
+      this.carbohydrates=parseInt(result['nutrients'].carbohydrates);
       this.test = 'ttps://spoonacular.com/recipeImages/1095835-90x90.jpg';
     //  this.id=result['meals'][0].id;
   
@@ -43,9 +44,9 @@ export class Man3Page implements OnInit {
   //     console.log(result)});
   //   }
 
-  detail(id) {
-   // console.log(id);
-    this.router.navigate(['/combodetail',{id}]);
+  detail(id,url,title) {
+    //console.log(title);
+    this.router.navigate(['/combodetail',{id,url,title}]);
   }
 
 }

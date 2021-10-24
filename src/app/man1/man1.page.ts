@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class Man1Page implements OnInit {
 
-  public cal1= 2250
+  public cal1= 2500
   public meals:any;
   public protein:any;
   public calories:any;

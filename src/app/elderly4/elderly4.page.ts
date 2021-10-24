@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-elderly3',
-  templateUrl: './elderly3.page.html',
-  styleUrls: ['./elderly3.page.scss'],
+  selector: 'app-elderly4',
+  templateUrl: './elderly4.page.html',
+  styleUrls: ['./elderly4.page.scss'],
 })
-export class Elderly3Page implements OnInit {
+export class Elderly4Page implements OnInit {
 
-  public cal1= 1650
+  public cal1= 1500
   public meals:any;
   public protein:any;
   public calories:any;
