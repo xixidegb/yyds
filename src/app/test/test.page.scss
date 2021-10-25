@@ -19,7 +19,14 @@ ion-toolbar {
 
 
 ion-button{
-    margin-top: 40px;
+    margin: 30% 3% 0 3%;
+    --background: #FFA47F;
+    --border-radius: 25px;
+    color:white;
+    
 }
 
 
+ion-list {
+    margin-top: 7%;
+}
