@@ -1,6 +1,7 @@
 div {
-    margin: 0 5%;
+    margin: -5% 5% 0 5%;
     font-size: 0.8em;
+    
 }
 
 h2 {
@@ -29,4 +30,8 @@ ion-toolbar {
 
 * {
     font-family: 'Times New Roman', Times, serif;
+}
+
+ion-content {
+    --background: linear-gradient(0deg, white, white 70%, rgb(255, 242, 184));
 }
