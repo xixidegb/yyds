@@ -54,6 +54,7 @@ h5{
     background-color: rgba(29, 35, 35, 0.534);
     margin-top: -50px;
     color: #ffffff;
+    z-index: 1000;
 }
 
 h6 {
@@ -71,7 +72,7 @@ ion-grid {
         margin:1% 0;
     }
     padding:2% 0;
-    margin:4% 2% 10% 2%;
+    margin:14% 2% 10% 2%;
 }
 
 .name {
