@@ -16,9 +16,6 @@ export class RegisterPage implements OnInit {
   successMsg: string = '';
   errorMsg: string = '';
 
-  form = [
-    { name: 'I agree with the conditions and terms', value: 'privacy policy', checked: true }
-  ];
   
 
   error_msg = {
@@ -54,11 +51,6 @@ export class RegisterPage implements OnInit {
   ) { }
 
 
-   public checkCheckbox(c: AbstractControl){
-    if(c.get('termsAndConditions').value == false){
-      return false;
-    }else return true;}
-
   ngOnInit() {
     this.userForm = this.fb.group({
       email: new FormControl('', Validators.compose([
@@ -69,12 +61,12 @@ export class RegisterPage implements OnInit {
         Validators.minLength(6),
         Validators.required
       ])),
-      terms: [null, Validators.required] 
+      terms: new FormControl(null, Validators.compose([
+        Validators.required,
+        Validators.requiredTrue
+      ]))
     });
   }
-
-
- 
 
   register() {
 
