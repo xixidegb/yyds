@@ -27,17 +27,17 @@ ion-row {
 
 
 ion-item {
-    font-size:0.8em;
-    font-weight: 350;
+    font-size:0.95em;
+    font-weight: 400;
     margin: 0;
     padding: 0 3% 0 0;
     ion-col:first-child {
-        color:rgb(252, 148, 107);
+        color:rgb(203, 87, 41);
         padding: 0;
         margin: 0;
     }
     ion-col:nth-child(2) {
-        color:rgb(76,76,76);
+        color:rgb(48,48,48);
         text-align:right;
         padding: 0;
         margin: 0;
@@ -48,14 +48,17 @@ ion-item {
 
 
 h5{
-    margin: 1.5% 0 7% 5%;   
-    font-weight: 450;
+    margin: 1.5% 0 7% 4%;   
+    font-weight: 690;
     font-size: 1em;
+    background-color: rgba(29, 35, 35, 0.534);
+    margin-top: -50px;
+    color: #ffffff;
 }
 
 h6 {
     margin: 12% 0 1% 5%; 
-    font-weight: 400;
+    font-weight: 530;
     font-size: 0.95em;
 }
 
@@ -68,7 +71,7 @@ ion-grid {
         margin:1% 0;
     }
     padding:2% 0;
-    margin:1% 2% 10% 2%;
+    margin:4% 2% 10% 2%;
 }
 
 .name {
