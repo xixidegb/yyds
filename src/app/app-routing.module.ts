@@ -113,6 +113,10 @@ const routes: Routes = [
     path: 'elderly4',
     loadChildren: () => import('./elderly4/elderly4.module').then( m => m.Elderly4PageModule)
   },
+  {
+    path: 'privacypolicy',
+    loadChildren: () => import('./privacypolicy/privacypolicy.module').then( m => m.PrivacypolicyPageModule)
+  },
 
 
 ];
