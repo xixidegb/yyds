@@ -9,24 +9,29 @@ import{HttpClient} from "@angular/common/http";
   styleUrls: ['./shopping-list.page.scss'],
 })
 export class ShoppingListPage implements OnInit {
-  records:any[]=[];
+
 
   constructor(private http:HttpClient) { }
 
+
+  option = {
+    slidesPerView: 1.1,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 10,
+     autoplay:true,
+  }
+
+
+
+
+
   ngOnInit() {
-    this.loadDataFromCsvFile();
+    
   }
 
-  loadDataFromCsvFile() 
-  {
-    this.http.get('/assets/food.csv',
-    {responseType:"text"}).subscribe((datatemp)=>{
-      let obj = papa.parse(datatemp);
-      let arr = obj.data;
-      arr.splice(0,1);
-      this.records = arr;
-    })
+  
 
-  }
+
 
 }
