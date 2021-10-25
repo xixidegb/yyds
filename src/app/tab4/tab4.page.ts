@@ -21,6 +21,7 @@ export class Tab4Page implements OnInit{
   greet;
   auth = getAuth();
   uid = this.auth.currentUser.uid
+  profile :any;
   
 
   user: any = {};
@@ -41,6 +42,16 @@ export class Tab4Page implements OnInit{
 
     
   }
+
+
+  option = {
+    slidesPerView: 1.1,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 10,
+     autoplay:true,
+  }
+
 
   
   ngOnInit() {
@@ -63,17 +74,32 @@ export class Tab4Page implements OnInit{
     var gender = this.user.gender
     var age = this.user.age
 
+    if (gender == 'Male'&& age <25) {
+      this.profile = "assets/boy.svg";
+    } else if (gender == 'Male'&& age >=25) {
+      this.profile = "assets/man.svg";
+    } else if (gender == 'Female'&& age >=25) {
+      this.profile = "assets/woman.svg";
+    } else if (gender == 'Female'&& age <25) {
+      this.profile = "assets/girl.svg";
+    } else {
+      this.profile = "assets/man.svg";
+    }
+
     // BMR（男）=（13.7×体重（kg））+（5.0×身高（cm））-（6.8×年龄）+66
     // BMR（女）=（9.6×体重（kg））+（1.8×身高（cm））-（4.7×年龄）+655
 
     var cal
-    if (gender=='male') {
+    if (gender=='Male') {
       cal = 13.7 * weight + 5 * height - 6.8 * age + 66
     } else {
       cal = 9.6 * weight + 1.8 * height - 4.7 * age + 655
     }
     this.user['cal'] = cal
   })
+
+
+
 
   }
 
