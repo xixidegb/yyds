@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Item enter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="Add">
+  <ion-img id="upload" src="../../assets/upload.png"></ion-img>
+  <form class="container" [formGroup]="goodsForm" (ngSubmit)="handleSave()">
+    <ion-item>
+      <ion-label>Classification</ion-label>
+      <ion-select placeholder="Not filled in" formControlName="type">
+        <ion-select-option value="Fresh cold storage">Fresh cold storage</ion-select-option>
+        <ion-select-option value="Snacks and drinks">Snacks and drinks</ion-select-option>
+        <ion-select-option value="Fruits and vegetables">Fruits and vegetables</ion-select-option>
+        <ion-select-option value="others">others</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div *ngIf="goodsForm.get('type').invalid && (goodsForm.get('type').dirty || goodsForm.get('type').touched)"
+        class="errors">
+        <div *ngIf="goodsForm.get('type').errors?.required">
+          Classification is required.
+        </div>
+    </div>
+    <ion-item>
+      <ion-label>Item label</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <div *ngIf="goodsForm.get('name').invalid && (goodsForm.get('name').dirty || goodsForm.get('name').touched)"
+        class="errors">
+        <div *ngIf="goodsForm.get('name').errors?.required">
+          Item label is required.
+        </div>
+    </div>
+    <ion-item>
+      <ion-label>Item quantity</ion-label>
+      <div class="numberBtn">
+        <ion-button (click)="minus()">-</ion-button>
+        <div class="num">{{goodsForm.get('number').value}}</div>
+        <ion-button (click)="add()">+</ion-button>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label>guarantee date</ion-label>
+      <ion-datetime formControlName="guarantee" displayFormat="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+    <div *ngIf="goodsForm.get('guarantee').invalid && goodsForm.get('guarantee').dirty"
+        class="errors">
+        <div *ngIf="goodsForm.get('guarantee').errors?.required">
+          guarantee date label is required.
+        </div>
+    </div>
+    <ion-item>
+      <ion-label>Preservation date</ion-label>
+      <ion-datetime formControlName="preservation" displayFormat="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+    
+    <div class="btn">
+      <ion-button (click)="goBack()">go back</ion-button>
+      <ion-button type="submit" [disabled]="goodsForm.invalid">Save</ion-button>
+    </div>
+  </form>
+</ion-content>

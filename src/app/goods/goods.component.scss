@@ -1,0 +1,15 @@
+.header-ios ion-toolbar:last-of-type{
+    --border-width:0;
+}
+.container{padding-right: 15px;}
+#upload{width: 30%; margin: 15px auto;}
+
+.numberBtn{display: flex; align-items: center;}
+.numberBtn .num{margin: 0 7px;}
+
+.btn{padding-left: 15px; margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.btn ion-button{width: 45%;--border-radius: 40px;}
+.btn ion-button:nth-child(1){ --background: #FFF; border: 1px solid #FFA47F;border-radius: 40px; color: #FFA47F;}
+.btn ion-button:nth-child(2){ --background: #FFA47F;}
+
+.errors{padding-left: 20px; color: red;}

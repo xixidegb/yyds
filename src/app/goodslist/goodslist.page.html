@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>About to expire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="tables">
+    <ion-row class="header">
+      <ion-col>
+        be overdue
+      </ion-col>
+      <ion-col>
+        name
+      </ion-col>
+      <ion-col>
+        quantity
+      </ion-col>
+      <ion-col (click)="handleSort()">
+        times<ion-icon *ngIf="sort" name="chevron-down-outline"></ion-icon><ion-icon *ngIf="!sort" name="chevron-up-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of data">
+      <ion-col>
+        {{getDate(item.preservation)}}
+      </ion-col>
+      <ion-col>
+        {{item.name}}
+      </ion-col>
+      <ion-col>
+        {{item.number}}
+      </ion-col>
+      <ion-col>
+        {{item.preservation}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

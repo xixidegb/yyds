@@ -113,6 +113,14 @@ const routes: Routes = [
     path: 'elderly4',
     loadChildren: () => import('./elderly4/elderly4.module').then( m => m.Elderly4PageModule)
   },
+  {
+    path: 'goods',
+    loadChildren: () => import('./goods/goods.module').then( m => m.GoodsModule)
+  },
+  {
+    path: 'goodslist',
+    loadChildren: () => import('./goodslist/goodslist.module').then( m => m.GoodslistPageModule)
+  },
 
 
 ];

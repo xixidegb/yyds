@@ -1,0 +1,30 @@
+.header-ios ion-toolbar:last-of-type{
+    --border-width:0;
+}
+
+.list{padding-right: 15px;}
+ion-card-content{
+    --background: #FFF; background-color: #FFF;
+}
+
+.tabs-time{display: flex; align-items: center; font-size: 13px; width: 60px;font-weight: 450;}
+.tabs-time::before {
+    margin: 5px 0px;
+    transition: opacity 160ms ease-in-out 100ms;
+    border-left:1px solid #999;
+    content: "";
+    opacity: 1;
+    will-change: opacity;
+}
+.handleTimes{
+    position: absolute; width: 100%; z-index: 999;
+}
+
+
+.tables{background: linear-gradient(0deg, #FFFFFF, #FFEE9C); height: 100%; padding: 0;}
+.tables ion-col{text-align: center;}
+.header ion-col{line-height: 30px;}
+.header ion-icon{vertical-align: middle;}
+.tables ion-row{background-color: #ededed;}
+.tables ion-row.header{background-color: #FFF;}
+.tables ion-row:nth-child(odd) {background-color: #FFF;}
