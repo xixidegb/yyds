@@ -1,29 +1,30 @@
 
-<ion-header>
+
+
+
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Personal Information</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content fullscreen="true">
 
-<ion-content>
 
   <ion-avatar>
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
   </ion-avatar>
 
-  <ion-list lines="full" class="ion-no-margin">
+  <ion-list lines="full" class="list-background">
     <ion-item color="none">
       <ion-label position="stacked">Name</ion-label>
       <ion-input [(ngModel)]="user.name"></ion-input>
     </ion-item>
 
-  </ion-list>
-
-  <ion-list lines="full" class="ion-no-margin">
+  
     <ion-item color="none">
       <ion-label>Gender</ion-label>
       <ion-select [(ngModel)]="user.gender">
@@ -31,6 +32,7 @@
         <ion-select-option value="Female">Female</ion-select-option>
       </ion-select>
     </ion-item>
+
     <ion-item color="none">
       <ion-label>Age:</ion-label>
       <ion-input type="number" [(ngModel)]="user.age"></ion-input>
@@ -49,4 +51,7 @@
     <ion-button expand="full" (click)="update()">Update</ion-button>
   </ion-list>
 
+
+
 </ion-content>
+

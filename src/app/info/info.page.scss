@@ -1,7 +1,36 @@
-.ion-no-margin {
+a {text-decoration: none}
+
+ion-content {
+    --background: linear-gradient(0deg, white, white 70%, rgb(255, 242, 184));
+    
+}
+
+.list-background {
     background: transparent;
 }
 
-ion-content {
-    --background: linear-gradient(rgb(255, 238, 161),#ffffff);
+
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    --opacity: 0;
+}
+
+
+ion-button{
+    margin-top: 50px;
+    --background: #FFA47F;
+    --border-radius: 25px;
+    color:white;
+    
+}
+
+
+ion-list {
+    margin-top: 7%;
+}
+
+ion-item {
+    --border-color: rgb(225, 226, 228);
 }

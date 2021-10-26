@@ -1,40 +1,68 @@
+<!--
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title class="signin">Sign In</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+-->
 
 <ion-content class="ion-padding">
-  <form class="form" [formGroup]="userForm" (ngSubmit)="signIn()">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" formControlName="email" [(ngModel)]="user.email"></ion-input>
-    </ion-item>
-    
-    <ng-container *ngFor="let error of error_msg.email">
-      <div *ngIf="userForm.get('email').hasError(error.type) && (userForm.get('email').dirty || userForm.get('email').touched)">
-        {{ error.message }}
-      </div>
-    </ng-container>
+  <ion-toolbar>
+    <ion-title class="signin">SIGN IN</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+<div class="avatar">
+  <ion-avatar>
+    <img src="assets/girl.svg">
+  </ion-avatar>
+</div>
 
-    <ion-item>
-      <ion-label position="floating" color="primary">Password</ion-label>
-      <ion-input type="password" formControlName="password" [(ngModel)]="user.password" class="form-controll" required></ion-input>
-    </ion-item>
-    
-    <ng-container *ngFor="let error of error_msg.password">
-        <div *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
+<ion-card>
+  <ion-card-header>
+  </ion-card-header>
+  <ion-card-content>
+
+    <form class="form" [formGroup]="userForm" (ngSubmit)="signIn()">
+      <ion-item>
+        <img class="input-icon" src="assets/icon/youxiang.svg">
+        <ion-input class="input-text" type="text" formControlName="email" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+      </ion-item>
+      
+      <ng-container *ngFor="let error of error_msg.email">
+        <div *ngIf="userForm.get('email').hasError(error.type) && (userForm.get('email').dirty || userForm.get('email').touched)">
           {{ error.message }}
         </div>
-    </ng-container>
-
-    <ion-button type="submit" expand="block" [disabled]="!userForm.valid">Signin</ion-button>
+      </ng-container>
+  
+      <ion-item class="password">
+        <img class="input-icon" src="assets/icon/yuechi.svg">
+        <ion-input class="input-text" type="password" formControlName="password" [(ngModel)]="user.password" class="form-controll" required placeholder="Password"></ion-input>
+      </ion-item>
+      
+      <ng-container *ngFor="let error of error_msg.password">
+          <div *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
+            {{ error.message }}
+          </div>
+      </ng-container>
     
-    <label class="ion-text-center" color="danger">{{errorMsg}}</label>
-  </form>
-  <p class="ion-text-center">Not registered yet? <a (click)="goToSignup()">Register</a></p>
-  <p class="ion-text-center"><a routerLink="/reset">Reset</a> your Password</p>
+  
+      <ion-button type="submit" expand="block" [disabled]="!userForm.valid">Sign in</ion-button>
+      
+      <label class="ion-text-center" color="danger">{{errorMsg}}</label>
+
+    </form>
+    <div class="options">
+    <p class="reset"><a routerLink="/reset">Forget password</a></p>
+    <p class="register"><a (click)="goToSignup()">Register</a></p>
+    </div>
+  
+  </ion-card-content> 
+  </ion-card>
+
+
 </ion-content>

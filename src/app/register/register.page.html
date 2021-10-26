@@ -1,3 +1,4 @@
+<!--
 <ion-header>
   <ion-toolbar>
     <ion-title>Register</ion-title>
@@ -6,11 +7,19 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+-->
 
 <ion-content class="ion-padding">
+  
+
+  <header>
+    <h5>Register</h5>
+  </header>
+  <img src="assets/investigation.jpg">
+
   <form class="form" [formGroup]="userForm" (ngSubmit)="register()">
     <ion-item>
-      <ion-label position="stacked">Name</ion-label>
+      <ion-label>Name</ion-label>
       <ion-input type="text" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
 
@@ -68,7 +77,7 @@
 
     <ion-item no-lines>
       <ion-checkbox name="terms" value="" checked="false" formControlName="terms"></ion-checkbox>
-      <ion-label>I accept <a routerLink="/privacypolicy">Terms and Conditions</a></ion-label>
+      <ion-label class="checkbox-label">I accept <a routerLink="/privacypolicy">Terms and Conditions</a></ion-label>
 
     </ion-item>
 
@@ -76,5 +85,6 @@
 
   
   <p class="ion-text-center">Already registered? <a (click)="goToLogin()">Login</a></p>
+
 
 </ion-content>
