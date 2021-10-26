@@ -2,9 +2,16 @@
     padding-left: 10px;
 }
 
-header {
-    background: linear-gradient(rgb(255, 238, 161),#ffffff);
-    padding-top: 10%;
+.signin {
+    text-align: center;
+}
+
+ion-content {
+    --background: linear-gradient(rgb(255, 238, 161),#ffffff);
+}
+
+ion-toolbar {
+    --background: transparent;
 }
 
 h5 {
@@ -13,12 +20,9 @@ h5 {
 
 img {
     margin-top: 20px;
-    margin-bottom: 20px;
     overflow:hidden;
 }
 
 ion-button {
-    margin-top: 40px;
     --background:salmon;
-    margin-bottom: 20px;
 }

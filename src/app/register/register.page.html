@@ -10,11 +10,13 @@
 -->
 
 <ion-content class="ion-padding">
-  
+  <ion-toolbar>
+    <ion-title class="signin">Register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 
-  <header>
-    <h5>Register</h5>
-  </header>
   <img src="assets/investigation.jpg">
 
   <form class="form" [formGroup]="userForm" (ngSubmit)="register()">
