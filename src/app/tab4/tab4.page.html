@@ -30,7 +30,7 @@
 
 
 
-
+<!-- 
   <div id="middle">
         <div id="left">
             <h5>Calories</h5>
@@ -45,6 +45,19 @@
             <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> Expires in xx days</p>
             <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> Expires in xx days</p>
         </div>
+  </div> -->
+  <div id="middle">
+    <div id="left">
+        <h5>Calories</h5>
+        <p id= "first"> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> xxx</p>
+        <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> xxx</p>
+        <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> {{ user.cal }} cal</p>
+    </div>
+
+    <div id ="right">
+        <h5>Notification</h5>
+        <p *ngFor="let x of expiresData"> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> {{x.name}} Expires in {{x.expDay}} days</p>
+    </div>
   </div>
 
   <div id="tab4-3">

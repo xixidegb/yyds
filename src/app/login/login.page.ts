@@ -14,7 +14,10 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 export class LoginPage implements OnInit {
 
-  user: any = {};
+  user: any = {
+    'email':'1@2.com',
+    'password':'111111'
+  };
   userForm: FormGroup;
   successMsg: string = '';
   errorMsg: string = '';
@@ -85,9 +88,8 @@ export class LoginPage implements OnInit {
   if (this.user.email && this.user.password) {
     
     this.authObj.signInWithEmailAndPassword(this.user.email, this.user.password).then((res) => {
-      console.log(res);
-
-      this.router.navigateByUrl('tabs/tabs/tab1');
+      localStorage.setItem('uid',res.user.uid);
+      this.router.navigateByUrl('tabs/tabs/tab4');
 
 
     }).catch(e => {

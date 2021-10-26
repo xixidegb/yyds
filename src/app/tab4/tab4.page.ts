@@ -22,6 +22,7 @@ export class Tab4Page implements OnInit{
   auth = getAuth();
   uid = this.auth.currentUser.uid
   profile :any;
+  expiresData:any = [];
   
 
   user: any = {};
@@ -40,7 +41,6 @@ export class Tab4Page implements OnInit{
       this.greet="Evening";
     }
 
-    
   }
 
 
@@ -96,17 +96,39 @@ export class Tab4Page implements OnInit{
       cal = 9.6 * weight + 1.8 * height - 4.7 * age + 655
     }
     this.user['cal'] = cal
-  })
+    })
 
-
-
-
+    this.expiresData = [];
+    this.db.object('/product/'+ this.uid).snapshotChanges().subscribe((item:any) => {
+      let temp = {...item.payload.val() };
+      let list:Array<any> = [];
+      for(let x in temp) {
+        list.push(temp[x]);
+      }
+      list.sort(this.sortAsc)
+      for(let x in list) {
+        let now = new Date();
+        let day7 = new Date(list[x].preservation);
+        let date = (day7.getTime() - now.getTime())/(1000*60*60*24);
+        if(date > 0 && date <=7) {
+          list[x]['expDay'] = Math.floor(date);
+          if(this.expiresData.length < 3) {
+            this.expiresData.push(list[x]);
+          }
+        }
+      }
+    })
   }
 
-
-  
+  sortAsc(obj1, obj2) {
+    var val1 = new Date(obj1.preservation);
+    var val2 = new Date(obj2.preservation);
+    if (val1 < val2) {
+        return -1;
+    } else if (val1 > val2) {
+        return 1;
+    } else {
+        return 0;
+    }
+  }
 }
-
-
-
-

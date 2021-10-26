@@ -1,0 +1,43 @@
+<ion-header translucent>
+  <ion-toolbar color="warning">
+    <ion-title>At home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div id="count">
+    <!-- <ion-searchbar placeholder="Where are the things?Search them"></ion-searchbar> -->
+    <div class="container">
+      <div class="li" (click)="goPages(5)">
+        <div>{{count1}}</div>
+        <div class="img"><ion-img src="../../assets/icon-expire1.png"></ion-img>About to expire</div>
+      </div>
+      <div class="li" (click)="goPages(6)">
+        <div>{{count2}}</div>
+        <div class="img"><ion-img src="../../assets/icon-expire2.png"></ion-img>Has expired</div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="ttl">
+      <div>My belongings</div>
+      <!-- <div><ion-img src="../../assets/icon-add.png"></ion-img>add to</div> -->
+    </div>
+
+    <div class="type-list">
+      <div (click)="goPages(1)">
+          <ion-img src="../../assets/icon-type1.png"></ion-img>  Fresh cold storage
+      </div>
+      <div (click)="goPages(2)">
+          <ion-img src="../../assets/icon-type2.png"></ion-img> Snacks and drinks
+      </div>
+      <div (click)="goPages(3)">
+          <ion-img src="../../assets/icon-type3.png"></ion-img>  Fruits and vegetables
+      </div>
+      <div (click)="goPages(4)">
+          <ion-img src="../../assets/icon-type4.png"></ion-img>  others
+    </div>
+    </div>
+
+    <ion-button id="btn" routerLink="/goods">Enter goods</ion-button>
+  </div>
+</ion-content>
