@@ -49,7 +49,7 @@ export class Tab4Page implements OnInit{
     centeredSlides: true,
     loop: true,
     spaceBetween: 10,
-     autoplay:true,
+    autoplay:true,
   }
 
 
@@ -97,7 +97,9 @@ export class Tab4Page implements OnInit{
     }
     this.user['cal'] = parseInt(cal)
     })
+  }
 
+  ionViewDidEnter() {
     this.expiresData = [];
     this.db.object('/product/'+ this.uid).snapshotChanges().subscribe((item:any) => {
       let temp = {...item.payload.val() };
