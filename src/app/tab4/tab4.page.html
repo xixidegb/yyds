@@ -21,9 +21,8 @@
     </a>
     <h6>{{currentDate | date: 'dd MMMM'}}</h6> 
     <ion-label>Hi, <strong> {{user.name}} </strong>!</ion-label> <br>
-    <br>
-    <ion-label>Weight: {{user.weight}} kg</ion-label> <br>
-    <ion-label>Height: {{user.height}} cm</ion-label> <br>
+    <div id="weight">Height: {{user.height}}</div>
+    <div id="weight">Weight: {{user.weight}}</div>
     <p>Good {{greet}}!</p>
   </div>
 
@@ -49,9 +48,12 @@
   <div id="middle">
     <div id="left">
         <h5>Calories</h5>
-        <p id= "first"> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> xxx</p>
+        <!--
+        <p id= "first"> <ion-icon src="assets/icon/strawberry.svg"></ion-icon></p>
         <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> xxx</p>
-        <p> <ion-icon src="assets/icon/strawberry.svg"></ion-icon> {{ user.cal }} cal</p>
+        -->
+        <p><strong>{{ user.cal }}</strong><br>kCal<br>Daily Ingest</p>
+
     </div>
 
     <div id ="right">
