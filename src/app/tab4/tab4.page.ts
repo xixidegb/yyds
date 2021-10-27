@@ -93,7 +93,7 @@ export class Tab4Page implements OnInit{
     if (gender=='Male') {
       cal = 13.7 * weight + 5 * height - 6.8 * age + 66
     } else {
-      cal = 9.6 * weight + 1.8 * height - 4.7 * age + 655
+      cal = (9.6 * weight + 1.8 * height - 4.7 * age + 655)*1.3
     }
     this.user['cal'] = cal
     })
