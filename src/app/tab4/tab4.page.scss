@@ -4,16 +4,24 @@
 
 
 
-
+//cal
+#cal{
+    padding-top:5%;
+}
+//unit
+#unit{
+    padding-left:5%;
+}
 
 
 #middle div {
-    min-height: 136px;
-    width:43%;
+    height: 160px;
+    width:44%;
     background-color: rgb(234,240,227);
     border-radius: 20px;
     padding-left:3%;
     display: inline-block;
+    vertical-align:top;
 }
 
 #left {
@@ -37,8 +45,9 @@
 }
 
 #middle div:first-child{
-    min-height: 136px;
+    width:42%;
     background-color: rgb(255,246,220);
+    padding-left:4%;
 }
 
 
