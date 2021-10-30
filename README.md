@@ -6,7 +6,8 @@ The main functions are user system, searching recipes by ingredients, combo list
 
 Since all the dependencies are installed, after cloning this respository, run 'ionic serve' CLI in terminal. 
 
-For Android studio, delete the Android folder, then run the CLI below in terminal to start the Android emulator. 
+For Android studio, delete the Android folder, then run the CLI below in terminal to start the Android emulator.    
+
 npm i @capacitor/android   
 
 npx cap add android    
